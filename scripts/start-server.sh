@@ -39,7 +39,7 @@ else
         ${STEAMCMD_DIR}/steamcmd.sh \
         +force_install_dir ${SERVER_DIR} \
         +login ${USERNAME} ${PASSWRD}  \
-		+set_guard_code ${GUARDCODE} \
+		+set__steam_guard_code ${GUARDCODE} \
         +app_update ${GAME_ID} validate \
         +quit
     else
