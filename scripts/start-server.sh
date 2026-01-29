@@ -65,4 +65,4 @@ echo "---Server ready---"
 
 echo "---Start Server---"
 cd ${SERVER_DIR}
-${SERVER_DIR}/srcds_run -game ${GAME_NAME} ${GAME_PARAMS} -nullrhi -server -console +port ${GAME_PORT}
+${SERVER_DIR}/VECTORDRIFTServer -game ${GAME_NAME} ${GAME_PARAMS} -nullrhi -server -console +port ${GAME_PORT}
