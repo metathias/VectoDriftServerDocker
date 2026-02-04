@@ -31,5 +31,5 @@ RUN mkdir $DATA_DIR && \
 
 #Server Start
 
-ENTRYPOINT ["server-start.sh"]
+ENTRYPOINT ["./scripts/start-server.sh"]
 
