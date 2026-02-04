@@ -31,4 +31,5 @@ ADD /scripts/ /opt/scripts/
 RUN chmod -R 770 /opt/scripts/
 
 #Server Start
-ENTRYPOINT ["/scripts/server-start.sh"]
+sleep infinity
+
