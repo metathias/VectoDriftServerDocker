@@ -27,9 +27,9 @@ RUN mkdir $DATA_DIR && \
 	chown -R $USER $DATA_DIR && \
 	ulimit -n 2048
 
-ADD /scripts/ /opt/scripts/
-RUN chmod -R 770 /opt/scripts/
+
 
 #Server Start
-sleep infinity
+
+ENTRYPOINT ["server-start.sh"]
 
