@@ -37,6 +37,9 @@ term_handler() {
 }
 
 trap 'kill ${!}; term_handler' SIGTERM
+
+echo 2258720 >${SERVER_DIR}/steam_appid.txt
+
 su ${USER} -c "/opt/scripts/start-server.sh" &
 killpid="$!"
 while true
