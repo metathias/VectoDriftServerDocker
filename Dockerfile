@@ -1,4 +1,4 @@
-FROM debian:12-slim
+FROM ghcr.io/epicgames/unreal-engine:dev-slim-5.7.2
 
 RUN apt-get update && \
 	apt-get -y install --no-install-recommends lib32gcc-s1 lib32stdc++6 lib32z1 wget && \
@@ -19,6 +19,7 @@ ENV USERNAME=""
 ENV PASSWRD=""
 ENV USER="steam"
 ENV DATA_PERM=770
+ENV PAT_TOKEN=""
 
 RUN mkdir $DATA_DIR && \
 	mkdir $STEAMCMD_DIR && \
