@@ -1,4 +1,4 @@
-FROM ghcr.io/epicgames/unreal-engine:dev-slim-5.7.2
+FROM steamcmd/steamcmd:rocky-8
 
 RUN apt-get update && \
 	apt-get -y install --no-install-recommends lib32gcc-s1 lib32stdc++6 lib32z1 wget && \
