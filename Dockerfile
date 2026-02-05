@@ -1,4 +1,4 @@
-FROM steamcmd/steamcmd:cachyos-3
+FROM steamcmd/steamcmd:ubuntu-24
 RUN apt-get update && \
 	apt-get -y install --no-install-recommends lib32gcc-s1 lib32stdc++6 lib32z1 wget && \
 	rm -rf /var/lib/apt/lists/*
