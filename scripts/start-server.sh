@@ -72,4 +72,4 @@ echo "---Server ready---"
 
 echo "---Start Server---"
 cd ${SERVER_DIR}
-${SERVER_DIR}/VECTORDRIFTServer.sh -game ${GAME_NAME} ${GAME_PARAMS} +port ${GAME_PORT}
+${SERVER_DIR}/VECTORDRIFTServer.sh ${GAME_PARAMS}
