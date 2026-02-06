@@ -23,11 +23,8 @@ echo "---Taking ownership of data...---"
 chown -R root:${GID} /opt/scripts
 chmod -R 750 /opt/scripts
 chown -R ${UID}:${GID} ${DATA_DIR}
+chmod +x ${SERVER_DIR}/VECTORDRIFTServer.sh
 
-# Fix for CSDM not working properly
-if [ -f "${SERVER_DIR}/cstrike/addons/sourcemod/gamedata/cssdm.games.txt" ]; then
-  chmod 550 ${SERVER_DIR}/cstrike/addons/sourcemod/gamedata/cssdm.games.txt
-fi
 
 echo "---Starting...---"
 term_handler() {
