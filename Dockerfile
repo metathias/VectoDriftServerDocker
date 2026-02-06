@@ -18,6 +18,7 @@ ENV USERNAME=""
 ENV PASSWRD=""
 ENV USER="steam"
 ENV DATA_PERM=770
+ENV APPID=""
 
 RUN mkdir $DATA_DIR && \
 	mkdir $STEAMCMD_DIR && \
