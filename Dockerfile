@@ -28,6 +28,6 @@ RUN mkdir $DATA_DIR && \
 	ulimit -n 2048
 ADD /scripts/ /opt/scripts/
 RUN chmod -R 770 /opt/scripts/
-
+RUN chmod +x ${SERVER_DIR}/VECTORDRIFTServer.sh
 #Server Start
 ENTRYPOINT ["/opt/scripts/start.sh"]
