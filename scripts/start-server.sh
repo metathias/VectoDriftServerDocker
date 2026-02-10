@@ -30,7 +30,7 @@ if [ "${USERNAME}" == "" ]; then
         ${STEAMCMD_DIR}/steamcmd.sh \
         +force_install_dir ${SERVER_DIR} \
         +login ${USERNAME} ${PASSWRD}  \
-        +app_update ${GAME_ID} \
+        +app_update ${SERVER_ID} \
         +quit
     fi
 else
@@ -39,13 +39,13 @@ else
         ${STEAMCMD_DIR}/steamcmd.sh \
         +force_install_dir ${SERVER_DIR} \
         +login ${USERNAME} ${PASSWRD} ${GUARDCODE} \
-        +app_update ${GAME_ID} validate \
+        +app_update ${SERVER_ID} validate \
         +quit
     else
         ${STEAMCMD_DIR}/steamcmd.sh \
         +force_install_dir ${SERVER_DIR} \
         +login ${USERNAME} ${PASSWRD} ${GUARDCODE} \
-        +app_update ${GAME_ID} \
+        +app_update ${SERVER_ID} \
         +quit
     fi
 fi
