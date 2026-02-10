@@ -24,7 +24,7 @@ if [ "${USERNAME}" == "" ]; then
         ${STEAMCMD_DIR}/steamcmd.sh \
         +force_install_dir ${SERVER_DIR} \
         +login ${USERNAME} ${PASSWRD}  \
-        +app_update ${GAME_ID} validate \
+        +app_update ${SERVER_ID} validate \
         +quit
     else
         ${STEAMCMD_DIR}/steamcmd.sh \
@@ -63,7 +63,9 @@ if [ ! -f ${DATA_DIR}/.steam/sdk32/steamclient.so ]; then
     fi
     cp -R ${STEAMCMD_DIR}/linux32/* ${DATA_DIR}/.steam/sdk32/
 	cp -R ${STEAMCMD_DIR}/linux64/* ${DATA_DIR}/.steam/sdk64/
-
+	if [ ! -d ${SERVER_DIR}/VECTORDRIFT/Binaries/Linux/steam_appid.txt ]; then
+	echo ${GAME_ID} > ${SERVER_DIR}/VECTORDRIFT/Binaries/Linux/steam_appid.txt  	
+    fi
 
 	
 fi
